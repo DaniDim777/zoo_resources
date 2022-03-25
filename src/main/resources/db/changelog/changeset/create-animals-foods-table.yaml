@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-animals-foods
+      author: Dani Dim
+      changes:
+        - createTable:
+            tableName: animals_foods
+            columns:
+              - column:
+                  name: animals_id
+                  type: bigint
+                  constraints:
+                    foreignKey: animals_id
+                    nullable: false
+              - column:
+                  name: foods_id
+                  type: bigint
+                  constraints:
+                    foreignKey: foods_id
+                    nullable: false

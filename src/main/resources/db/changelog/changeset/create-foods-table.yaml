@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-foods
+      author: Dani Dim
+      changes:
+        - createTable:
+            tableName: foods
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: current_amount
+                  type: bigint
+              - column:
+                  name: measure
+                  type: varchar(200)
+              - column:
+                  name: type
+                  type: varchar(200)
+              - column:
+                  name: consumption
+                  type: bigint

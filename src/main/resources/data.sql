@@ -1,0 +1,50 @@
+-- DROP TABLE IF EXISTS animals;
+-- DROP TABLE IF EXISTS foods;
+-- DROP TABLE IF EXISTS animals_foods;
+-- DROP TABLE IF EXISTS databasechangelog;
+-- DROP TABLE IF EXISTS databasechangeloglock;
+--
+-- CREATE TABLE animals (
+--   id INT AUTO_INCREMENT PRIMARY KEY,
+--   name VARCHAR(250) NOT NULL,
+--   kind VARCHAR(250) NOT NULL,
+--   is_predator VARCHAR(250) NOT NULL,
+--   consumption INT DEFAULT NULL
+-- );
+--
+-- CREATE TABLE foods (
+--   id INT AUTO_INCREMENT PRIMARY KEY,
+--   current_amount INT NOT NULL,
+--   measure VARCHAR(250) NOT NULL,
+--   type VARCHAR(250) DEFAULT NULL
+-- );
+--
+-- select * from animals;
+-- select * from foods;
+-- select * from animals_foods;
+--
+-- INSERT INTO animals (predator, kind, name)
+-- VALUES
+--  (false, 'Mammal', 'Monkey'),
+--  (false, 'Mammal', 'Hare'),
+-- 	(true, 'Mammal', 'Tiger'),
+-- 	(false, 'Bird', 'Eagle'),
+-- 	(false, 'Mammal', 'Horse');
+--
+-- INSERT INTO foods (consumption, current_amount, measure, type)
+-- VALUES
+--     (5, 80, 'Pieces', 'Carrot'),
+--     (2, 50, 'Pieces', 'Cabbage'),
+--     (8, 100, 'Pieces', 'Banana'),
+--     (8, 800, 'Kg', 'Seed'),
+--     (5, 200, 'liter', 'Water'),
+-- 	   (3, 25, 'Kg', 'Meat'),
+-- 	   (8, 0, 'Pieces', 'Apple');
+--
+-- INSERT INTO animals_foods (animals_id, foods_id)
+-- VALUES
+--     (1, 3), (1, 5), (1, 7),
+--     (2, 1), (2, 2), (2, 5),
+--     (3, 5), (3, 6),
+--     (4, 4), (4, 5), (4, 6), (4, 7),
+--     (5, 1), (5, 4), (5, 5), (5, 7);
